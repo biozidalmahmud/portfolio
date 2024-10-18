@@ -332,6 +332,8 @@ section {
   width: 1px;
 }
 
+/* logo */
+
 .logo {
   align-content: center;
   align-items: center;
@@ -359,6 +361,12 @@ section {
   color: white;
 }
 
+.logo img {
+  width: 65px;
+}
+
+
+/* navigation menu */
 .menu {
   opacity: 1;
   transform: perspective(1200px);
@@ -440,7 +448,7 @@ section {
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 48px;
-  height: 90vh;
+  height: 55vh;
   justify-content: center;
   max-width: 1080px;
   overflow: visible;
@@ -558,7 +566,7 @@ section {
 }
 
 .heading h1 {
-  font-size: 6.25rem;
+  font-size: 5.25rem;
   font-style: normal;
   letter-spacing: -0.03em;
   line-height: 1.2em;
@@ -566,7 +574,7 @@ section {
   color: rgb(230, 230, 230), rgba(0, 0, 0, 0.75);
   text-decoration: none;
   text-transform: none;
-  font-weight: 500;
+  font-weight: 800;
   -webkit-text-stroke-width: initial;
   -webkit-text-stroke-color: initial;
 }
@@ -584,7 +592,7 @@ section {
   margin: min(0em, calc(calc(1.3em - 1.2em, 1.3em) / -2)); */
 }
 
-/* .profile-info {
+ .profile-info {
   outline: none;
   display: flex;
   flex-direction: column;
@@ -594,7 +602,7 @@ section {
   transform: perspective(1200px);
   flex: none;
   height: auto;
-  max-width: 500px;
+  max-width: 1000px;
   min-width: 200px;
   position: relative;
   width: 100%;
@@ -608,14 +616,14 @@ section {
   font-family: "Inter Tight", "Inter Tight Placeholder", sans-serif;
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0px;
   line-height: 1.4em;
   text-align: center;
   -webkit-text-stroke-width: initial;
   -webkit-text-stroke-color: initial;
   font-feature-settings: initial;
-} */
+} 
 
 .hero .glow-on-hover {
   width: 140px;
@@ -695,6 +703,32 @@ section {
   color: white;
 }
 
+/* intro-video */
+
+.intro-video {
+  opacity: 1;
+  will-change: transform;
+  transform: perspective(1200px);
+  align-items: center;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 10px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+#intro-video {
+  width: 880px;
+  height: auto;
+  aspect-ratio: 1.8/1;
+}
+
 /* image-1 */
 .image-1 {
   opacity: 1;
@@ -767,8 +801,6 @@ section {
 /* featured and expertise*/
 .featured,
 .expertise,
-.motivation,
-.experience,
 .contact {
   align-items: center;
   display: flex;
@@ -899,7 +931,7 @@ section {
   border: 1px solid #1d1d1d;
   border-radius: 10px;
   background-color: #0a0a0a;
-  padding: 3rem 2.5rem;
+  padding: 1.5rem 2rem;
   line-height: 1.2;
 }
 
@@ -917,10 +949,9 @@ section {
 .skill p,
 .job-info {
   font-family: 'Metropolis', sans-serif;
-  font-size: 1.5rem;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.4px;
-  line-height: 34px;
 }
 
 /* motivation section */
@@ -933,10 +964,6 @@ section {
   padding-bottom: 12.5rem;
 }
 
-/* .call-out {
-  position: relative;
-} */
-
 .contact .cta {
   border: 2px solid white;
   border-radius: 100px;
@@ -947,7 +974,23 @@ section {
   font-size: 20px;
   padding: 1rem 1.6rem;
   display: block;
-  margin: 2rem auto;
+  margin: 4rem auto;
+  cursor: pointer;
+}
+
+#cta-heading1 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+#cta-heading2 {
+  font-size: 5.625rem;
+}
+
+#cta-copy {
+  width: 40%;
+  margin: 1rem auto;
+  text-align: center;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -983,4 +1026,29 @@ section {
   .job-info {
     font-size: 1.2rem;
   }
+}
+
+
+
+/* back to top */
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: #555;
+}
+
+.back-to-top.show {
+  display: block;
 }
