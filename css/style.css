@@ -10,9 +10,13 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
-  width: auto;
+  max-width: 1700px;
   align-items: center;
   background-color: #000000;
   color: rgb(255, 255, 255);
@@ -23,8 +27,14 @@ body {
   justify-content: flex-start;
   overflow: visible;
   padding: 0;
+  margin: 0 auto;
   position: relative;
   font-family: 'Metropolis', sans-serif;
+  background: url(../images/rm218-bb-07.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
 }
 
 h2 {
@@ -38,6 +48,11 @@ h2 {
   text-transform: uppercase;
   margin: 0px;
   padding: 0px;
+}
+
+.logo h3 {
+  font-size: 2.5rem;
+  font-weight: 100;
 }
 
 article video {
@@ -268,10 +283,11 @@ section {
 }
 
 .random-3 {
-  display: contents;
+  /* display: contents; */
+  width: 100%;
 }
 
-.random-3 > div {
+/* .random-3 > div {
   opacity: 1;
   transform: perspective(1200px);
   flex: none;
@@ -330,6 +346,13 @@ section {
   padding: 0;
   position: relative;
   width: 1px;
+} */
+
+#header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
 }
 
 /* logo */
@@ -367,6 +390,11 @@ section {
 
 
 /* navigation menu */
+
+.hamburger {
+  display: none;
+}
+
 .menu {
   opacity: 1;
   transform: perspective(1200px);
@@ -448,7 +476,7 @@ section {
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 48px;
-  height: 55vh;
+  /* height: 55vh; */
   justify-content: center;
   max-width: 1080px;
   overflow: visible;
@@ -614,7 +642,7 @@ section {
   text-align: center;
   color: rgb(179, 194, 203);
   font-family: "Inter Tight", "Inter Tight Placeholder", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0px;
@@ -816,6 +844,13 @@ section {
   width: 100%;
 }
 
+/* body {
+
+  background-image: url(../images/gra.jpg);
+  object-fit: cover;
+  background-position: center;
+} */
+
 .featured .featured-work {
   align-items: center;
   display: flex;
@@ -1001,9 +1036,7 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
-  .hero {
-    height: 70vh;
-  }
+  
   .heading h1 {
     font-size: 3.4rem;
   }
@@ -1043,6 +1076,7 @@ section {
   font-size: 16px;
   display: none;
   transition: all 0.3s ease;
+  z-index: 999;
 }
 
 .back-to-top:hover {
@@ -1051,4 +1085,150 @@ section {
 
 .back-to-top.show {
   display: block;
+}
+
+/* Media Query for Tablets (680px to 1024px) */
+@media screen and (min-width: 680px) and (max-width: 1024px) {
+  body {
+    width: 90%;
+  }
+
+  .hero {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .logo {
+    gap: 0;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  .logo h3 {
+    font-size: 1.2rem;
+  }
+
+  .menu {
+    gap: 0;
+  }
+
+  .menu a {
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  #real-estate-work article {
+    width: 45%;
+  }
+
+  .skill h3,
+.job h3 {
+  font-size: 1.5rem;
+}
+
+}
+
+/* Media Query for Mobile Devices (max-width: 679px) */
+@media screen and (max-width: 679px) {
+  .logo {
+    gap: 0;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+
+  .logo h3 {
+    font-size: 1.2rem;
+  }
+
+  .menu {
+    gap: 0;
+  }
+
+  .menu a {
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  #intro-video {
+    width: 90%;
+    height: 100%;
+  }
+
+  #intro-video iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  .featured-work-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #cta-heading2 {
+    font-size: 4.625rem;
+  }
+  
+  #cta-copy {
+    width: 50%;
+  }
+
+  .skill {
+    width: 100%;
+  }
+  
+  .skill article,
+  .job article {
+    width: 45%;
+  }
+
+  #real-estate-work article {
+    width: 48%;
+  }
+  
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .section-description div p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .hero div div .profile-info p {
+    font-size: 14px;
+  }
+
+  .skill p,
+  .job-info {
+    font-size: 12px;
+  }
+
+  .skill h3,
+  .job h3 {
+    font-size: 1rem;
+  }
+
+  .section-info {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .section-data, .skill, .job, .featured, .expertise, .contact {
+    gap: 0;
+  }
+
 }
