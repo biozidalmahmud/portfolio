@@ -934,6 +934,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+#short-form-work article {
   width: 20% !important;
 }
 
